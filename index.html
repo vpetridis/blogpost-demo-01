@@ -3,21 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Living Simple Life</title>
   </head>
   <body>
+    <header>
+      <div class="main-container">
+        <h1>Living the simple life</h1>
+        <h4>A blog exploring minimalism in life</h4>
+        <nav>
+          <ul class="nav-tabs">
+            <li class="tab">HOME</li>
+            <li class="tab">ABOUT ME</li>
+            <li class="tab">RECENT POSTS</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="main-container">
-        <head>
-            <h1></h1>
-            <h4></h4>
-          <nav></nav>
-        </head>
-    
-        <div class="flex-container">
-          <section></section>
-          <section></section>
+      <!-- FLEX 2 COLUMNS -->
+      <section class="col main-blog">
+        <div class="post">
+          <div class="post-img">
+            <!-- <img
+              src="assets/orlova-maria-6viJObrmnBw-unsplash.jpg"
+              alt="emile-seuin-R9OueKOtGGU-unsplash"
+            /> -->
+            <p>
+              Date created ... <span id="comments-number"> | 3 Comments</span>
+            </p>
+          </div>
+          <article class="post-text">
+            <h3>Finding simplicity in life</h3>
+            <p>
+              Life can get complicated really quickly, but it doesn't have to
+              be! There are many ways to simplify your life, a few of which
+              we've explored in the past. This week we're taking a bit of a
+              approach though, in how you can find simplicity in the life you
+              already living.
+            </p>
+            <p class="contiune-reading">CONTINUE READING</p>
+          </article>
         </div>
+      </section>
+
+      <section class="col sidebar">
+        <div class="about-me">ABOUT ME</div>
+        <div class="recent-posts">RECENT POSTS</div>
+      </section>
     </div>
+    <footer>
+      <h6>Living the Simple Life</h6>
+      <p>Copyright &copy;2019</p>
+    </footer>
 
     <script src="index.js"></script>
   </body>
