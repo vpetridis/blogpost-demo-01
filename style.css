@@ -1,15 +1,232 @@
-html, body{
-    margin:0;
-    padding: 0;
+:root {
+  --colors-bg-primary: #e8f9fc;
+  --colors-fonts-secondary: #bf7b7d;
+  --colors-fonts-title: #ff7a32;
+  --colors-fonts-post: #143774;
+  --colors-fonts-navtabs: #6d6875;
 }
-footer{
-    margin: 0 auto;
-    text-align: center;
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto 0.5em auto;
+}
+@media screen and (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+h6 {
+  /* CONTINUE READING ELEMENT */
+  color: var(--colors-fonts-secondary);
+  margin: 0;
+  margin-top: 0.4em;
+}
+h3 {
+  color: var(--colors-fonts-post);
+  font-size: 1rem;
+}
+/* HEADER */
+header {
+  background: var(--colors-bg-primary);
+  height: 220px;
+  margin-bottom: 4em;
+}
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
-.main-container{
-    display:flex;
-    width: 70%;
-    max-width: 960px;
-    margin: 0 auto;
+.title-container {
+  max-width: 70%;
+}
+.title-container h1 {
+  color: #ff7a32;
+  font-family: "Lora", serif;
+  font-size: 2.2em;
+  margin: 0 auto;
+}
+.title-container h4 {
+  color: var(--colors-fonts-secondary);
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+}
+.nav-tabs .tab {
+  margin: 0 0.5em;
+}
+.nav-tabs a {
+  color: var(--colors-fonts-navtabs);
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+.nav-tabs a:hover,
+.nav-tabs a:focus {
+  color: var(--colors-fonts-title);
+  font-weight: bold;
+}
+.nav-tabs-active {
+  border-bottom: 2px solid #bf7b7d;
+  padding-bottom: 5px;
+}
+@media screen and (max-width: 1024px) {
+  header {
+    text-align: center;
+    height: 100%;
+    padding: 1em 0;
+  }
+  ul {
+    padding: 1em 0;
+  }
+}
+/* BLOG-POSTS */
+.col {
+  margin-top: 1em;
+}
+.main-blog {
+  width: 75%;
+}
+.post {
+  display: flex;
+  margin: 0 1em 7.5em 0;
+ height: 200px;
+  box-shadow: 6px 6px 14px -8px rgba(230, 191, 191, 1);
+  -webkit-box-shadow: 6px 6px 14px -8px rgba(230, 191, 191, 1);
+  -moz-box-shadow: 6px 6px 14px -8px rgba(230, 191, 191, 1);
+}
+.post-text {
+  margin: 0 0 1em 2em;
+}
+.post h3 {
+  margin: 0 auto;
+  color: var(--colors-fonts-title);
+}
+.post p {
+  margin: 0 auto;
+  line-height: 1.7rem;
+  color: var(--colors-fonts-navtabs);
+}
+.post-img,
+.post-img > img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.post-img p {
+  margin: 0.4em auto;
+}
+
+.post-img p {
+  font-size: 0.7rem;
+}
+@media screen and (max-width: 1024px) {
+  .post,
+  .main-blog {
+    width: 100%;
+    margin-bottom: 2em;
+    display: block;
+  }
+  .post{
+height: 29%;
+  }
+  .post p {
+    display: block;
+    margin: 0;
+  }
+  .post-img,
+  .post-img > img {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .post-text {
+    margin: 2em auto;
+  }
+}
+/* SIDEBARS */
+.sidebars,
+.side-section img {
+  width: 25%;
+}
+.sidebars {
+  min-width: 170px;
+}
+.side-section {
+  border: 20px solid var(--colors-bg-primary);
+  padding: 1.4em;
+  margin-bottom: 4em;
+}
+.side-section img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  margin-top: 1.5em;
+  border-radius: 5px;
+}
+.side-section p {
+  color: var(--colors-fonts-post);
+  font-size: 0.786rem;
+  line-height: 1.2rem;
+  margin: 1em 0 0 0;
+}
+.side-section h3 {
+  font-family: "Lora", sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+}
+.side-section .divider {
+  margin: 1em;
+  border-bottom: 2px solid var(--colors-bg-primary);
+}
+@media screen and (max-width: 1024px) {
+  .sidebars {
+    margin-top: 0.1em;
+    width: 100%;
+  }
+  .side-title-hidden {
+    display: none;
+  }
+  .side-section {
+    padding: 1em;
+  }
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  top: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  background: var(--colors-bg-primary);
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.85rem;
 }
