@@ -105,12 +105,12 @@ header {
   margin-top: 1em;
 }
 .main-blog {
-  width: 75%;
+  width: 72%;
 }
 .post {
   display: flex;
   color: var(--colors-fonts-title);
-  margin: 0 1em 7.5em 0;
+  margin: 0 1em 3.5em 0;
   height: 200px;
   box-shadow: 6px 6px 14px -8px rgba(230, 191, 191, 1);
   -webkit-box-shadow: 6px 6px 14px -8px rgba(230, 191, 191, 1);
@@ -120,7 +120,7 @@ header {
   margin: 0 0 1em 2em;
 }
 .post-index h3 {
-  margin: 0 auto;
+  margin: 1em auto 0.5em auto;
   color: var(--colors-fonts-title);
 }
 .post p,
@@ -128,14 +128,18 @@ header {
   margin: 0 auto;
   line-height: 1.7rem;
   color: var(--colors-fonts-navtabs);
+  padding-right: 1em;
 }
 .post-index {
-  height: 350px;
+  margin: 0 .5em 3em 0;
 }
 .post-index > img {
   width: 100%;
-  height: 150px;
+  height: 220px;
   object-fit: cover;
+}
+.post h3{
+  margin-bottom: .5em;
 }
 .post-img,
 .post-img > img {
@@ -146,8 +150,8 @@ header {
 }
 
 .post-img p {
-  font-size: 0.7rem;
-  margin: 7.6em auto;
+  font-size: .65rem;
+  margin: .1 auto;
 }
 @media screen and (max-width: 1024px) {
   .post,
@@ -166,7 +170,7 @@ header {
   }
   .post-img p {
     font-size: 0.7rem;
-    margin: .6em auto;
+    margin: 0.6em auto;
   }
   .post-img,
   .post-img > img {
@@ -212,7 +216,7 @@ header {
   font-size: 0.9rem;
   margin-top: 0.5em;
 }
-.side-section .divider {
+.divider {
   margin: 1em;
   border-bottom: 2px solid var(--colors-bg-primary);
 }
@@ -237,7 +241,7 @@ footer {
   left: 0;
   right: 0;
   padding: 1em;
-  background: var(--colors-bg-primary);
+  background: var(--colors-fonts-post);
   height: 50px;
   margin: 0 auto;
   text-align: center;
