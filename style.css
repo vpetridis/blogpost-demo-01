@@ -144,12 +144,10 @@ header {
   object-fit: cover;
   border-radius: 5px;
 }
-.post-img p {
-  margin: 0.4em auto;
-}
 
 .post-img p {
   font-size: 0.7rem;
+  margin: 7.6em auto;
 }
 @media screen and (max-width: 1024px) {
   .post,
@@ -160,11 +158,15 @@ header {
   }
   .post {
     height: 29%;
-    padding-bottom: .2em;
+    padding-bottom: 0.2em;
   }
   .post p {
     display: block;
     margin: 0;
+  }
+  .post-img p {
+    font-size: 0.7rem;
+    margin: .6em auto;
   }
   .post-img,
   .post-img > img {
