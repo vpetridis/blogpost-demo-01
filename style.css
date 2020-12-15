@@ -105,12 +105,15 @@ header {
     padding: 1em 0;
   }
 }
-/* BLOG-POSTS */
+/* =====================
+BLOG-POSTS
+ ===================== */
 .col {
   margin-top: 1em;
 }
 .main-blog {
   width: 72%;
+  order: 2;
 }
 .post {
   display: flex;
@@ -190,7 +193,12 @@ header {
     margin: 1.6em auto;
   }
 }
-/* SIDEBARS */
+/*  =====================
+ SIDEBARS
+  =====================*/
+  .sidebars{
+    order: 1;
+  }
 .sidebars,
 .side-section img {
   width: 25%;
