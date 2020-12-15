@@ -18,7 +18,7 @@ h6 {
   padding: 0;
   font-family: "Lato", sans-serif;
 }
-//ΠΑΝΤΑ ΤΟ ΒΑΖΟΥΜΕ ΑΥΤΟ ΓΙΑ ΝΑ ΕΙΝΑΙ ΟΙ ΕΙΚΟΝΕΣ ΣΕ ΜΠΛΟΚ ΚΑΙ ΝΑ ΜΗΝ ΕΧΟΥΝ ΚΕΝΟ!
+//ΜΠΑΙΝΕΙ ΠΑΝΤΑ ΓΙΑ ΝΑ ΕΙΝΑΙ ΟΙ ΕΙΚΟΝΕΣ ΣΕ ΜΠΛΟΚ ΚΑΙ ΝΑ ΜΗΝ ΕΧΟΥΝ ΚΕΝΟ!
 img {
   display: block;
 }
@@ -39,8 +39,8 @@ img {
 h6 {
   /* CONTINUE READING ELEMENT */
   color: var(--colors-fonts-secondary);
-  margin: 0;
-  margin-top: 0.4em;
+  margin: 0.8em auto;
+
 }
 h3 {
   color: var(--colors-fonts-post);
@@ -115,6 +115,7 @@ BLOG-POSTS
 }
 .main-blog {
   width: 72%;
+  /* ADDED ORDER TO MOVE THE MAIN-BLOG TO LEFT AND SIDEBAR TO RIGHT */
   order: 2;
 }
 .post {
@@ -164,6 +165,9 @@ BLOG-POSTS
   margin: 0.1 auto;
 }
 @media screen and (max-width: 1024px) {
+  .main-blog{
+    order: 1;
+  }
   .post,
   .main-blog {
     width: 100%;
@@ -239,6 +243,7 @@ BLOG-POSTS
   .sidebars {
     margin-top: 0.1em;
     width: 100%;
+    order: 2;
   }
   .side-title-hidden {
     display: none;
