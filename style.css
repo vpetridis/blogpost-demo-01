@@ -40,7 +40,6 @@ h6 {
   /* CONTINUE READING ELEMENT */
   color: var(--colors-fonts-secondary);
   margin: 0.8em auto;
-
 }
 h3 {
   color: var(--colors-fonts-post);
@@ -165,7 +164,7 @@ BLOG-POSTS
   margin: 0.1 auto;
 }
 @media screen and (max-width: 1024px) {
-  .main-blog{
+  .main-blog {
     order: 1;
   }
   .post,
@@ -233,12 +232,20 @@ BLOG-POSTS
 .side-section h3 {
   font-family: "Lora", sans-serif;
   font-size: 0.9rem;
-  margin-top: 0.5em;
+  margin: 0.5em auto;
 }
-.divider {
-  margin: 1em;
+.side-section-widget {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
   border-bottom: 2px solid var(--colors-bg-primary);
 }
+/* pseudo-class to select the last child in a flex.
+I am pretty sure this can be done better with js*/
+.side-section-widget:last-child {
+  border-bottom: 0;
+}
+
 @media screen and (max-width: 1024px) {
   .sidebars {
     margin-top: 0.1em;
@@ -266,7 +273,7 @@ TOOLTIP
 .tooltip .tooltiptext {
   margin-top: 2em;
   visibility: hidden;
-  font-size: .5rem;
+  font-size: 0.5rem;
   width: 120px;
   background-color: var(--colors-fonts-navtabs);
   color: #fff;
@@ -277,7 +284,8 @@ TOOLTIP
   z-index: 1;
 }
 
-.tooltip:hover .tooltiptext, .tooltip:focus .tooltiptext {
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
   visibility: visible;
 }
 
